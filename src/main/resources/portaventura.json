@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Shambala",
+    "category": "Hyper Coaster",
+    "location": [41.088353, 1.161880]
+  },
+  {
+    "name": "Stampida",
+    "category": "Roller Coaster",
+    "location": [41.090637, 1.156512]
+  },
+  {
+    "name": "Uncharted",
+    "category": "Dark Ride",
+    "location": [41.090637, 1.156512]
+  },
+  {
+    "name": "El Diablo",
+    "category": "Roller Coaster",
+    "location": [41.089209, 1.158135]
+  },
+  {
+    "name": "Tutuki Splash",
+    "category": "Water Rides",
+    "location": [41.085460, 1.156867]
+  },
+  {
+    "name": "Flying Dreams",
+    "category": "Immersion",
+    "location": [41.084850, 1.152242]
+  },
+  {
+    "name": "Grand Canyon Rapids",
+    "category": "Water Rides",
+    "location": [41.086893, 1.156603]
+  }
+]
