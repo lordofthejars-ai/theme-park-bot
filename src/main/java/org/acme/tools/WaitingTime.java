@@ -16,12 +16,12 @@ public class WaitingTime {
         this.timeCommands = ds.value(Long.class);
     }
 
-    public void setWaitingTime(String attraction, Duration waitingTime) {
-        this.timeCommands.set(attraction, waitingTime.toMinutes());
+    public void setWaitingTime(String attraction, long waitingTime) {
+        this.timeCommands.set(attraction, waitingTime);
     }
 
-    public Duration getWaitingTime(String attraction) {
-        return Duration.ofMinutes(this.timeCommands.get(attraction));
+    public long getWaitingTime(String attraction) {
+        return this.timeCommands.get(attraction);
     }
 
 }

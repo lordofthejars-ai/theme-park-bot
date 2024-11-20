@@ -22,7 +22,7 @@ public class Ride extends PanacheMongoEntity {
         Bson query = Filters
                 .near("location",
                         point,
-                        100.0,
+                        140.0,
                         0.0);
         return find(query).list();
     }

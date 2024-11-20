@@ -26,13 +26,15 @@ public class RideResource {
     @Startup
     public void populateData() throws IOException {
 
+        importer.deleteAttractions();
         importer.insertAttractions();
 
     }
 
     @GET
     public List<Ride> listAll() {
-        Point refPoint = new Point(new Position(59.329897, 18.063941));
+        System.out.println(currentLocation);
+        Point refPoint = new Point(new Position(currentLocation.getFirst(), currentLocation.getLast()));
         return Ride.findNear(refPoint);
     }
 }
