@@ -22,6 +22,8 @@ public interface RidesInformationService {
         """)
     @UserMessage("""
         The theme park user has the following question: {question}
+        
+        The answer must be max 2 lines.
         """)
     String chat(String question);
 

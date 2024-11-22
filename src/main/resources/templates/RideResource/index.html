@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Web Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Title -->
+    <header class="header">
+      <h1>Current fictional location {coordinates}</h1>
+    </header>
+
+    <!-- Image -->
+    <div class="image-container">
+      <img src="mapa.jpg"/>
+    </div>
+
+    <!-- Three Columns -->
+    <div class="columns">
+      <!-- First Column: Table -->
+      <div class="column table-column">
+        <h2>Waiting Times</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ride</th>
+              <th>Time in Minutes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {#for time in waitingTimes}
+                <tr>
+                  <td>{time.key}</td>
+                  <td>{time.value}</td>
+                </tr>
+            {/for}
+          </tbody>
+        </table>
+
+          <h2>Possible Questions</h2>
+
+          <div class="text-item">
+              <span class="text-content">Can you give me an explanation of what is Shambala ride?</span>
+              <button class="copy-btn" onclick="copyText(this)" title="Copy to clipboard">
+                  📋
+              </button>
+          </div>
+
+          <div class="text-item">
+              <span class="text-content">What is the minimum height for Uncharted ride?</span>
+              <button class="copy-btn" onclick="copyText(this)" title="Copy to clipboard">
+                  📋
+              </button>
+          </div>
+
+          <div class="text-item">
+              <span class="text-content">What rides I can go if my height is 115 cm?</span>
+              <button class="copy-btn" onclick="copyText(this)" title="Copy to clipboard">
+                  📋
+              </button>
+          </div>
+
+          <div class="text-item">
+              <span class="text-content">What is the waiting times for Shambala ride?</span>
+              <button class="copy-btn" onclick="copyText(this)" title="Copy to clipboard">
+                  📋
+              </button>
+          </div>
+
+          <div class="text-item">
+              <span class="text-content">"What are the rides that are near my position?</span>
+              <button class="copy-btn" onclick="copyText(this)" title="Copy to clipboard">
+                  📋
+              </button>
+          </div>
+
+      </div>
+
+      <!-- Middle Column: Chat Window -->
+      <div class="column chat-column">
+        <h2>Chat</h2>
+        <div id="chatWindow" class="chat-window"></div>
+        <input type="text" id="chatInput" placeholder="Type your message">
+        <button id="sendButton">Send</button>
+      </div>
+
+      <div class="column text-component-column">
+
+        {#for ride in rides}
+            <h2>{ride.key.fileName}</h2>
+            <div>
+              <p>{ride.value}</p>
+            </div>
+        {/for}
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
