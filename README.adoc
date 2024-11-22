@@ -1,0 +1,16 @@
+= Theme Park
+
+This project is an AI application using:
+
+* Quarkus
+* LangChain4J (RAG + Tools)
+* Redis
+* MongoDB
+
+To start the example you need to:
+
+* Set `QUARKUS_LANGCHAIN4J_OPENAI_API_KEY` with your OpenAI API Key.
+* Have Docker or Podman Desktop installed in your computer in order to Quarkus automatically start Redis and MongoDB.
+* Run `./mvnw quarkus:dev`
+
+Video: https://youtu.be/BIkfIj-ZUHE
